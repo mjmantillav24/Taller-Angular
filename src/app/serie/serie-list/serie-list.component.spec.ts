@@ -5,6 +5,7 @@ import { DebugElement } from '@angular/core';
 
 import { SerieListComponent } from './serie-list.component';
 
+
 describe('SerieListComponent', () => {
   let component: SerieListComponent;
   let fixture: ComponentFixture<SerieListComponent>;
