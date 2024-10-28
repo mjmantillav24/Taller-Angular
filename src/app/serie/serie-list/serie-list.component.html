@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<body>
+<div style="width: 100%; margin: 1.25% 3% 3% 3%;">
+  <div class="container-fluid">
+    <div class="col-6">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th class="h4">#</th>
+            <th class="h4">Name</th>
+            <th class="h4">Channel</th>
+            <th class="h4">Seasons</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of series; let i = index" [ngClass]="{'table-light': i % 2 === 0, 'table-secondary': i % 2 !== 0}">
+            <td>
+              <dd>{{ i + 1 }}</dd>
+            </td>
+            <td>
+              <dd>{{c.name}}</dd>
+            </td>
+            <td>
+              <dd>{{c.channel}}</dd>
+            </td>
+            <td>
+              <dd>{{c.seasons}}</dd>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="text-end h5">
+              Seasons average: {{ averageSeasons | number:'1.1-1' }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
